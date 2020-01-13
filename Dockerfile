@@ -1,4 +1,4 @@
-FROM  tensorflow/tensorflow:1.8.0-gpu-py3
+FROM  tensorflow/tensorflow:1.15.0-gpu-jupyter
 
 ARG DEBIAN_FRONTEND=noninteractive
 
