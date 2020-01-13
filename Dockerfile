@@ -34,7 +34,7 @@ RUN pip3 install \
   pydotplus\
   graphviz \
   nvidia-ml-py3 \
-  tensorflow-addons
+  
 RUN pip3 install https://github.com/schmiph2/pystoi/archive/master.zip
 RUN pip3 install https://github.com/schmiph2/python-pesq/archive/master.zip
 RUN pip3 install https://github.com/schmiph2/pysepm/archive/master.zip
