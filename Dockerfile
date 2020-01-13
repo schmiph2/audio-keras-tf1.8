@@ -6,7 +6,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y install \
 			python3-tk \
 	&& rm -rf /var/lib/apt/lists/* #cleans up apt cache -> reduces image size
-RUN pip install --upgrade pip	
 RUN apt-get  -y install tzdata
 RUN apt-get -y install python3-dev
 RUN apt-get update && apt-get install -y git
