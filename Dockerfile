@@ -4,16 +4,15 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Update List of avai. Packages and intall additional packages
 RUN apt-get update && apt-get -y install \
-			python3-tk \
+			python-tk \
 	&& rm -rf /var/lib/apt/lists/* #cleans up apt cache -> reduces image size
 RUN apt-get  -y install tzdata
-RUN apt-get -y install python3-dev
 RUN apt-get update && apt-get install -y git
 RUN apt-get -y install htop
 RUN apt-get -y install graphviz
-RUN pip3 install --upgrade -I setuptools
-RUN pip3 install -Iv keras==2.2.4 	
-RUN pip3 install \
+RUN pip install --upgrade -I setuptools
+RUN pip install -Iv keras==2.2.4 	
+RUN pip install \
   jupyter \
   matplotlib \
   seaborn	\
@@ -31,15 +30,14 @@ RUN pip3 install \
   cython \
   pydot \
   pydotplus\
-  graphviz \
-  nvidia-ml-py3
+  graphviz
   
-RUN pip3 install https://github.com/schmiph2/pystoi/archive/master.zip
-RUN pip3 install https://github.com/schmiph2/python-pesq/archive/master.zip
-RUN pip3 install https://github.com/schmiph2/pysepm/archive/master.zip
+RUN pip install https://github.com/schmiph2/pystoi/archive/master.zip
+RUN pip install https://github.com/schmiph2/python-pesq/archive/master.zip
+RUN pip install https://github.com/schmiph2/pysepm/archive/master.zip
 
-RUN pip3 install pysptk  
-RUN pip3 install samplerate
+RUN pip install pysptk  
+RUN pip install samplerate
 RUN add-apt-repository ppa:jonathonf/ffmpeg-4
 RUN apt-get update
 RUN apt-get -y install ffmpeg && apt-get -y install libavcodec-extra 
